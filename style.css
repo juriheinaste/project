@@ -150,6 +150,8 @@ p{
 }
 .col--50{
 	width: 50%;
+	overflow: hidden;
+	padding: 0;
 }
 .col--60{
 	width: 60%;
@@ -337,6 +339,12 @@ main{
 .thumbnail--large{
 	height: 480px;
 }
+
+.thumbnail--large:hover{
+	transform: scale(1.4);
+	transition-duration: 1s;
+}
+
 .thumbnail:before{
 	content: "";
 	position: absolute;
