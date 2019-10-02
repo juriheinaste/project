@@ -19,7 +19,7 @@ body{
 	width: 100%;
 }
 
-.page2{
+.intro{
 	position:absolute;
 	background:black;
 	height:100vh;
@@ -28,15 +28,25 @@ body{
 	display:flex;
 	justify-content: center;
 	align-items: center;
+	animation-name:animation2;
+	animation-duration:1s;
+	animation-delay:2s;
+	animation-fill-mode:forwards;
+	animation-timing-function:cubic-bezier(0.67, 0.02, 0, 0.89);
 
 }
 
-.valge{
+.white{
 	position:absolute;
 	background:white;
 	height:100vh;
 	width:100%;
 	z-index:1;
+	animation-name:animation2;
+	animation-delay:3s;
+	animation-duration:1s;
+	animation-fill-mode:both;
+	animation-timing-function:cubic-bezier(0.67, 0.02, 0, 0.89);
 }
 
 .dot1{
@@ -67,23 +77,6 @@ body{
   100% { clip-path: inset(0 0 0 100%); }
 
 }
-.page2{
-	animation-name:animation2;
-	animation-duration:1s;
-	animation-delay:2s;
-	animation-fill-mode:forwards;
-	animation-timing-function:cubic-bezier(0.67, 0.02, 0, 0.89);
-}
-.valge{
-	animation-name:animation2;
-	animation-delay:3s;
-	animation-duration:1s;
-	animation-fill-mode:both;
-	animation-timing-function:cubic-bezier(0.67, 0.02, 0, 0.89);
-
-}
-
-
 
 section,
 .section{
@@ -262,11 +255,6 @@ nav{
 	background: rgba(255,255,255,0.1);
 }
 
-
-
-
-
-
 .logo{
 	position: relative;
 	display: flex;
@@ -280,7 +268,6 @@ nav{
 	font-family: "Montserrat";
 }
 
-
 /*main*/
 
 main{
@@ -288,8 +275,6 @@ main{
 	width: 100%;
 	padding-left: 300px;
 }
-
-
 
 /*banner*/
 
@@ -322,7 +307,6 @@ main{
 	margin: 0;
 }
 
-
 /*contact*/
 
 .icon{
@@ -346,7 +330,6 @@ main{
 	padding: 30px;
 	margin-left: auto;
 }
-
 
 /*experience*/
 
@@ -384,10 +367,7 @@ main{
 	transform:scale(1.1);
 	transition-duration: 0.5s;
 	box-shadow: 5px 5px 10px #888888;
-
 }
-
-
 
 /*thumbnail*/
 
@@ -412,12 +392,7 @@ main{
 .hidden{
 	overflow:hidden;
 	padding:0;
-
 }
-
-
-
-	
 
 .thumbnail:before{
 	content: "";
@@ -450,13 +425,13 @@ main{
 	border-color: #03A9F4;
 }
 
-.footer1{
-	background:lightgray;
+.footer{
+	background:#CFD8DC;
 	padding:0 30%;
 	padding-top:50px;
 	
 }
-.footer2{
+.footer-form{
 	display:flex;
 	justify-content: space-between;
 	
@@ -467,8 +442,6 @@ input[type=text]{
 	background: #ECEFF1;
 	padding: 5px 10px;
 	border: none;
-
-	
 }
 
 input:focus+ .line{
@@ -500,20 +473,34 @@ input[type=submit]{
 	border-radius: 5px;
 	font-size: 20px;
 	color: white;
+	cursor: pointer;
 }
 
 input[type=checkbox]{
- 	position: absolute;
- 	opacity: 0;
- 	cursor: pointer;
- 	height: 0;
- 	width: 0;
+	width: 20px;
+	height: 20px;
+
 }
 
-
-input[type=checkbox]:checked{
-	position: relative;
+.checkbx {
+	position: absolute;
 	content: "";
-	background: black;
-	transition: 3s ease;
+	background: #ababab;
+	height: 18px;
+	width: 18px;
+	border-radius: 2px;
+	margin-top: -24px;
+    margin-left: 4px;
+}
+
+@keyframes circle {
+  0% { clip-path: circle(2%); }
+  100% { clip-path: circle(10%); }
+}
+
+.checkbx:hover {
+	animation: circle;
+  clip-path: circle;
+  transition: 8s;
+  	background: white;
 }
