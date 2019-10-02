@@ -19,6 +19,71 @@ body{
 	width: 100%;
 }
 
+.page2{
+	position:absolute;
+	background:black;
+	height:100vh;
+	width:100%;
+	z-index:2;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.valge{
+	position:absolute;
+	background:white;
+	height:100vh;
+	width:100%;
+	z-index:1;
+}
+
+.dot1{
+	display:inline;
+	color:white;
+	font-size:100px;
+	margin:0;
+	padding:0;
+
+}
+@keyframes animation1{
+	0% {color:transparent;}
+
+	100%{color:white;}
+}
+.dot1{
+	animation-name:animation1;
+	animation-duration:1s;
+	animation-iteration-count:3;
+}
+.dot2{
+	animation-delay:0.2s;
+}
+.dot3{animation-delay:0.4s;
+}
+@keyframes animation2{
+	0% { clip-path: inset(0 0 0 0); }
+  100% { clip-path: inset(0 0 0 100%); }
+
+}
+.page2{
+	animation-name:animation2;
+	animation-duration:1s;
+	animation-delay:2s;
+	animation-fill-mode:forwards;
+	animation-timing-function:cubic-bezier(0.67, 0.02, 0, 0.89);
+}
+.valge{
+	animation-name:animation2;
+	animation-delay:3s;
+	animation-duration:1s;
+	animation-fill-mode:both;
+	animation-timing-function:cubic-bezier(0.67, 0.02, 0, 0.89);
+
+}
+
+
 
 section,
 .section{
@@ -289,13 +354,6 @@ main{
 	padding: 20px;
 	font-size: 14px;
 }
-
-.card:hover{
-        transform: scale(1.1);
-        transition-duration: 0.5s;
-        box-shadow: 0px 10px 20px -12px rgba(0,0,0,0.75);
-}
-
 .card__title{
 	font-size: 22px;
 	font-weight: 600;
@@ -322,6 +380,12 @@ main{
 	overflow: hidden;
 	margin-bottom: 20px;
 }
+.card:hover{
+	transform:scale(1.1);
+	transition-duration: 0.5s;
+	box-shadow: 5px 5px 10px #888888;
+
+}
 
 
 
@@ -336,7 +400,25 @@ main{
 }
 .thumbnail--large{
 	height: 480px;
+
 }
+.thumbnail--large:hover{
+	height: 480px;
+	transform:scale(1.5);
+	transition-duration: 0.5s;
+
+
+}
+.hidden{
+	overflow:hidden;
+	padding:0;
+
+}
+
+
+
+	
+
 .thumbnail:before{
 	content: "";
 	position: absolute;
@@ -370,3 +452,61 @@ main{
 	border-color: #03A9F4;
 }
 
+.footer1{
+	background:lightgray;
+	padding:0 30%;
+	height:300px;
+	padding-top:50px;
+	
+}
+.footer2{
+	
+
+	display:flex;
+	justify-content: space-between;
+
+
+
+	
+	
+	
+}
+input[type=text]{
+	height:40px;
+	width:200px;
+
+	
+}
+input[type=checkbox]{
+	
+	
+}
+input[type=submit]{
+	height:50px;
+	width:100px;
+	background:black;
+	color:white;
+}
+input:focus+ .line{
+	background:blue;
+	margin:0%;
+}
+
+.check{
+	margin-top:20px;
+	
+}
+.submit{
+	margin-top:30px;
+	display:flex;
+	justify-content: center;
+}
+.line{
+	margin:0 50%;
+
+	
+	height:5px;
+	background:lightgray;
+	transition:1s ease;
+	transition: margin 0.2s;
+}
