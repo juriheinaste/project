@@ -432,8 +432,6 @@ main{
 	      
 }
 
-
-
 /*btn*/
 
 .btn{
@@ -455,58 +453,67 @@ main{
 .footer1{
 	background:lightgray;
 	padding:0 30%;
-	height:300px;
 	padding-top:50px;
 	
 }
 .footer2{
-	
-
 	display:flex;
 	justify-content: space-between;
-
-
-
-	
-	
 	
 }
 input[type=text]{
 	height:40px;
 	width:200px;
+	background: #ECEFF1;
+	padding: 5px 10px;
+	border: none;
 
 	
 }
-input[type=checkbox]{
-	
-	
-}
-input[type=submit]{
-	height:50px;
-	width:100px;
-	background:black;
-	color:white;
-}
+
 input:focus+ .line{
-	background:blue;
+	background: #009eec;
 	margin:0%;
 }
 
 .check{
-	margin-top:20px;
+	padding-top:20px;
 	
 }
 .submit{
-	margin-top:30px;
+	padding:30px 0;
 	display:flex;
 	justify-content: center;
 }
 .line{
 	margin:0 50%;
-
-	
 	height:5px;
 	background:lightgray;
 	transition:1s ease;
 	transition: margin 0.2s;
+}
+
+input[type=submit]{
+	border: none;
+	background: #010133;
+	padding: 10px 40px;
+	border-radius: 5px;
+	font-size: 20px;
+	color: white;
+}
+
+input[type=checkbox]{
+ 	position: absolute;
+ 	opacity: 0;
+ 	cursor: pointer;
+ 	height: 0;
+ 	width: 0;
+}
+
+
+input[type=checkbox]:checked{
+	position: relative;
+	content: "";
+	background: black;
+	transition: 3s ease;
 }
